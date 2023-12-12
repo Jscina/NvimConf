@@ -14,3 +14,10 @@ end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>t",
+  "<cmd>lua require('telescope').extensions.projects.projects{}<CR>",
+  { noremap = true, silent = true }
+)
